@@ -1,51 +1,621 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title> Puppy dog pals</title>
-    </head>
- <body>
-        <header>
-        <h1> PUPPY DOG PALS </h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About us</a>
-            <a href="gallery.html">Breed gallery</a>
-            <a href="shop.html"> Boutique shop</a>
-            <a href="contact.html"> Contact us</a>
-            <span> login</span>
-            <span> cart[0]</span>
-        </nav>
-    </header>
-    <main>
-        <h2> WELCOME TO PUPPY DOG PALS</h2>
-        <section> 
-            <h3>Explore Breed gallery</h3>
-            <button>Explore now</button>
-        </section>
-        <section>
-            <h3> Shop in Boutique</h3>
-            <button> Explore now</h3>
-            </section>
-            <section>
-                <h3> READ REVIEWS </h3>
-                <p> [reviews on website and customer service]</p>
-        </main>
-        <footer>
-            <h4> CONTACT INFORMATION </h4>
-            <p>
-                Company name <br>
-                Email <br>
-                Contact number
-            </p> 
-            <p>
-                <span>(T)</span> <span>(F)</span><span>(I)</span>
-                      </p>
-                             <p>@2026 Puppy Dog Pals-BAC Assignment</p>
-                    </footer>
- </body>
-     </html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Puppy Dog Pals - Your one-stop destination for finding, dressing, and caring for your perfect dog. Explore breeds, shop boutique items, and take our personality quiz.">
+  <meta name="keywords" content="dog breeds, puppies, pet shop, dog boutique, pet care, Botswana">
+  <meta name="author" content="Puppy Dog Pals Ltd">
+  <meta name="theme-color" content="#C9A96E">
 
-                    
-                        
+  <!-- Open Graph for social sharing -->
+  <meta property="og:title" content="Home | Puppy Dog Pals">
+  <meta property="og:description" content="Find your perfect puppy and pet style at Puppy Dog Pals.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://puppydogpals.co.bw/">
+  <meta property="og:image" content="images/og-image.jpg">
+
+  <!-- Preconnect to CDNs for faster loading -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+  <title>Home | Puppy Dog Pals</title>
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Font Awesome 6.5 for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- My custom styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- I added this skip link so keyboard users can jump straight to the main content -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation bar - I used Bootstrap navbar because it handles mobile responsiveness automatically -->
+  <nav class="navbar navbar-expand-lg site-navbar sticky-top" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html" aria-label="Puppy Dog Pals Home">
+        Puppy Dog <span>Pals</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation menu">
+        <span class="navbar-toggler-icon" aria-hidden="true"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Breed Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html">Boutique Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="quiz.html">Get to Know You</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          <li class="nav-item">
+            <a href="login.html" class="nav-link" aria-label="Login to your account">
+              <i class="fa-regular fa-user" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="cart.html" class="cart-badge" id="cartBadge" aria-label="Shopping cart, 0 items">
+              <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+              <span id="cartCount" aria-live="polite">0</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <!-- Hero section with video background - I made this full-screen to create a strong first impression -->
+    <header class="video-hero">
+      <!-- I placed a video here with a poster image as fallback for browsers that do not support video -->
+      <video autoplay muted loop playsinline class="hero-video"
+             poster="Labrador Retriever.png"
+             aria-label="Background video showing happy puppies playing">
+        <source src="back.mp4" type="video/mp4">
+        <p>Your browser does not support the video tag.
+           <a href="back.mp4">Download the video</a> instead.</p>
+      </video>
+
+      <!-- I added this dark overlay so the white text stays readable on top of the video -->
+      <div class="video-overlay" aria-hidden="true"></div>
+
+      <div class="container hero-content">
+        <p class="banner-label">Welcome to Puppy Dog Pals</p>
+        <h1>Find Your Perfect Puppy and Pet Style</h1>
+        <p class="hero-subtitle">
+          We connect dog lovers in Botswana with the perfect furry companions, premium pet fashion,
+          and expert care advice. Whether you are looking for a loyal friend or the trendiest pet accessories,
+          your journey starts here.
+        </p>
+
+        <div class="d-flex gap-3 flex-wrap hero-buttons">
+          <a href="gallery.html" class="btn btn-brand">
+            <i class="fa-solid fa-paw" aria-hidden="true"></i> Explore Breeds
+          </a>
+          <a href="shop.html" class="btn btn-light">
+            <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i> Visit Boutique
+          </a>
+          <a href="quiz.html" class="btn btn-outline-light">
+            <i class="fa-solid fa-heart" aria-hidden="true"></i> Take Quiz
+          </a>
+        </div>
+
+        <!-- I added these trust badges to build credibility right away -->
+        <div class="trust-badges">
+          <div class="trust-item">
+            <i class="fa-solid fa-shield-dog" aria-hidden="true"></i>
+            <span>Trusted Breeders</span>
+          </div>
+          <div class="trust-item">
+            <i class="fa-solid fa-truck-fast" aria-hidden="true"></i>
+            <span>Fast Delivery</span>
+          </div>
+          <div class="trust-item">
+            <i class="fa-solid fa-medal" aria-hidden="true"></i>
+            <span>Premium Quality</span>
+          </div>
+          <div class="trust-item">
+            <i class="fa-solid fa-headset" aria-hidden="true"></i>
+            <span>24/7 Support</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- What We Offer - I created this section to clearly explain what our business does -->
+    <section class="what-we-offer" aria-labelledby="offer-heading">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-label">What We Do</span>
+          <h2 id="offer-heading">Everything Your Dog Needs, All in One Place</h2>
+          <p class="section-intro">
+            Puppy Dog Pals is not just a pet store. We are a community of dog lovers dedicated to
+            helping you find, care for, and celebrate your four-legged family member.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <article class="offer-card">
+              <div class="offer-icon">
+                <i class="fa-solid fa-dog" aria-hidden="true"></i>
+              </div>
+              <h3>Breed Matching</h3>
+              <p>
+                Browse our curated gallery of dog breeds with detailed profiles on temperament,
+                size, exercise needs, and grooming requirements to find your ideal companion.
+              </p>
+              <a href="gallery.html" class="link-arrow">Find Your Breed <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <article class="offer-card">
+              <div class="offer-icon icon-boutique">
+                <i class="fa-solid fa-shirt" aria-hidden="true"></i>
+              </div>
+              <h3>Boutique Fashion</h3>
+              <p>
+                From designer collars and leashes to cozy sweaters and raincoats, dress your pup
+                in style with our handpicked collection of premium pet fashion.
+              </p>
+              <a href="shop.html" class="link-arrow">Shop Collection <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <article class="offer-card">
+              <div class="offer-icon icon-care">
+                <i class="fa-solid fa-heart-pulse" aria-hidden="true"></i>
+              </div>
+              <h3>Expert Care Tips</h3>
+              <p>
+                Get professional advice on nutrition, training, health, and grooming. Our blog
+                and resources help you give your dog the best life possible.
+              </p>
+              <a href="about.html" class="link-arrow">Read Tips <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <article class="offer-card">
+              <div class="offer-icon icon-community">
+                <i class="fa-solid fa-users" aria-hidden="true"></i>
+              </div>
+              <h3>Community Events</h3>
+              <p>
+                Join our dog walks, training workshops, and social meetups. Connect with fellow
+                dog parents and let your pup make new friends.
+              </p>
+              <a href="contact.html" class="link-arrow">Join Events <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Breeds - I added this to showcase popular breeds and encourage exploration -->
+    <section class="featured-breeds" aria-labelledby="breeds-heading">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-label">Popular Picks</span>
+            <h2 id="breeds-heading">Trending Dog Breeds in Botswana</h2>
+          </div>
+          <a href="gallery.html" class="btn btn-outline-brand">View All Breeds</a>
+        </div>
+
+        <p class="section-intro">
+          These breeds are loved by our community for their adaptability to the Botswana climate,
+          friendly nature, and compatibility with local lifestyles.
+        </p>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <article class="breed-card">
+              <div class="breed-image">
+                <!-- I placed this placeholder image here so it can be replaced easily later -->
+                <img src="image.png" alt="Friendly Labrador Retriever with a golden coat" loading="lazy">
+               
+              </div>
+              <div class="breed-info">
+                <h3>Labrador Retriever</h3>
+                <div class="breed-meta">
+                  <span><i class="fa-solid fa-ruler-combined" aria-hidden="true"></i> Large</span>
+                  <span><i class="fa-solid fa-clock" aria-hidden="true"></i> High Energy</span>
+                </div>
+                <p>Loyal, friendly, and great with kids. Perfect for active families who love outdoor adventures.</p>
+                <a href="gallery.html#labrador" class="btn btn-sm btn-brand">Learn More</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <article class="breed-card">
+              <div class="breed-image">
+                <img src="Boerboel.png" alt="Majestic Boerboel standing guard" loading="lazy">
+                
+              </div>
+              <div class="breed-info">
+                <h3>Boerboel</h3>
+                <div class="breed-meta">
+                  <span><i class="fa-solid fa-ruler-combined" aria-hidden="true"></i> Extra Large</span>
+                  <span><i class="fa-solid fa-clock" aria-hidden="true"></i> Moderate Energy</span>
+                </div>
+                <p>South African mastiff known for loyalty and protection. Excellent guard dog and family protector.</p>
+                <a href="gallery.html#boerboel" class="btn btn-sm btn-brand">Learn More</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <article class="breed-card">
+              <div class="breed-image">
+                <img src="Poodle.png" alt="Elegant Poodle with curly coat" loading="lazy">
+                
+              </div>
+              <div class="breed-info">
+                <h3>Poodle</h3>
+                <div class="breed-meta">
+                  <span><i class="fa-solid fa-ruler-combined" aria-hidden="true"></i> Medium</span>
+                  <span><i class="fa-solid fa-clock" aria-hidden="true"></i> High Energy</span>
+                </div>
+                <p>Highly intelligent and elegant. Great for allergy sufferers and those who enjoy training sessions.</p>
+                <a href="gallery.html#poodle" class="btn btn-sm btn-brand">Learn More</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <article class="breed-card">
+              <div class="breed-image">
+                <img src="Jack Russell Terrier.png" alt="Energetic Jack Russell Terrier" loading="lazy">
+                
+              </div>
+              <div class="breed-info">
+                <h3>Jack Russell Terrier</h3>
+                <div class="breed-meta">
+                  <span><i class="fa-solid fa-ruler-combined" aria-hidden="true"></i> Small</span>
+                  <span><i class="fa-solid fa-clock" aria-hidden="true"></i> Very High Energy</span>
+                </div>
+                <p>Small but mighty! Perfect for apartment living with plenty of playtime and mental stimulation.</p>
+                <a href="gallery.html#jack-russell" class="btn btn-sm btn-brand">Learn More</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works - I created this section to show customers how easy it is to use our service -->
+    <section class="how-it-works" aria-labelledby="how-heading">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-label">Simple Process</span>
+          <h2 id="how-heading">How Puppy Dog Pals Works</h2>
+          <p class="section-intro">
+            Getting started is easy. We have simplified the journey to finding your perfect pet companion.
+          </p>
+        </div>
+
+        <div class="steps-container">
+          <div class="step-item">
+            <div class="step-number">01</div>
+            <div class="step-icon">
+              <i class="fa-solid fa-clipboard-question" aria-hidden="true"></i>
+            </div>
+            <h3>Take the Quiz</h3>
+            <p>Answer a few questions about your lifestyle, home, and preferences so we can understand what you need.</p>
+          </div>
+
+          <div class="step-connector" aria-hidden="true">
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">02</div>
+            <div class="step-icon">
+              <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            </div>
+            <h3>Get Matched</h3>
+            <p>Receive personalized breed recommendations and product suggestions tailored just for you.</p>
+          </div>
+
+          <div class="step-connector" aria-hidden="true">
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">03</div>
+            <div class="step-icon">
+              <i class="fa-solid fa-handshake" aria-hidden="true"></i>
+            </div>
+            <h3>Connect & Adopt</h3>
+            <p>Meet trusted breeders, schedule visits, and welcome your new best friend into your home.</p>
+          </div>
+
+          <div class="step-connector" aria-hidden="true">
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">04</div>
+            <div class="step-icon">
+              <i class="fa-solid fa-gift" aria-hidden="true"></i>
+            </div>
+            <h3>Shop & Celebrate</h3>
+            <p>Spoil your pup with premium accessories, food, and toys from our boutique collection.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products - I added this to showcase our boutique items and drive sales -->
+    <section class="featured-products" aria-labelledby="products-heading">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-label">Boutique Picks</span>
+            <h2 id="products-heading">Trending Pet Essentials</h2>
+          </div>
+          <a href="shop.html" class="btn btn-outline-brand">Shop All</a>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-6 col-md-4 col-lg-3">
+            <article class="product-card">
+              <div class="product-image">
+                <img src="Premium Leather Collar.png" alt="Premium leather dog collar with brass buckle" loading="lazy">
+                <button class="wishlist-btn" aria-label="Add to wishlist" data-product-id="collar-001">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+                <span class="product-badge">Bestseller</span>
+              </div>
+              <div class="product-info">
+                <h3>Premium Leather Collar</h3>
+                <p class="product-desc">Handcrafted genuine leather with brass hardware</p>
+                <div class="product-footer">
+                  <span class="price">P350.00</span>
+                  <button class="btn btn-sm btn-brand add-to-cart"
+                          data-product-id="collar-001"
+                          data-product-name="Premium Leather Collar"
+                          data-product-price="350"
+                          data-product-image="images/products/collar-leather.jpg"
+                          aria-label="Add Premium Leather Collar to cart">
+                    <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <article class="product-card">
+              <div class="product-image">
+                <img src="Orthopedic Dog Bed.png" alt="Orthopedic memory foam dog bed in grey" loading="lazy">
+                <button class="wishlist-btn" aria-label="Add to wishlist" data-product-id="bed-001">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="product-info">
+                <h3>Orthopedic Dog Bed</h3>
+                <p class="product-desc">Memory foam support for joint health</p>
+                <div class="product-footer">
+                  <span class="price">P1,200.00</span>
+                  <button class="btn btn-sm btn-brand add-to-cart"
+                          data-product-id="bed-001"
+                          data-product-name="Orthopedic Dog Bed"
+                          data-product-price="1200"
+                          data-product-image="images/products/bed-orthopedic.jpg"
+                          aria-label="Add Orthopedic Dog Bed to cart">
+                    <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <article class="product-card">
+              <div class="product-image">
+                <img src="Interactive Rope Toy.png" alt="Colorful rope tug toy for dogs" loading="lazy">
+                <button class="wishlist-btn" aria-label="Add to wishlist" data-product-id="toy-001">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+                <span class="product-badge sale">Sale</span>
+              </div>
+              <div class="product-info">
+                <h3>Interactive Rope Toy</h3>
+                <p class="product-desc">Durable cotton rope for tug-of-war fun</p>
+                <div class="product-footer">
+                  <span class="price">
+                    <span class="price-old">P180.00</span>
+                    P120.00
+                  </span>
+                  <button class="btn btn-sm btn-brand add-to-cart"
+                          data-product-id="toy-001"
+                          data-product-name="Interactive Rope Toy"
+                          data-product-price="120"
+                          data-product-image="images/products/toy-rope.jpg"
+                          aria-label="Add Interactive Rope Toy to cart">
+                    <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <article class="product-card">
+              <div class="product-image">
+                <img src="Elevated Bowl Set.png" alt="Stainless steel elevated dog bowl set" loading="lazy">
+                <button class="wishlist-btn" aria-label="Add to wishlist" data-product-id="bowl-001">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="product-info">
+                <h3>Elevated Bowl Set</h3>
+                <p class="product-desc">Ergonomic stainless steel feeding station</p>
+                <div class="product-footer">
+                  <span class="price">P450.00</span>
+                  <button class="btn btn-sm btn-brand add-to-cart"
+                          data-product-id="bowl-001"
+                          data-product-name="Elevated Bowl Set"
+                          data-product-price="450"
+                          data-product-image="images/products/bowl-stainless.jpg"
+                          aria-label="Add Elevated Bowl Set to cart">
+                    <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
 
     
+    <!-- Explore More - I used this section to guide customers to either the breed gallery or boutique shop -->
+    <section class="explore-more" aria-labelledby="explore-heading">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-label">Discover</span>
+          <h2 id="explore-heading">Explore More</h2>
+          <p class="section-intro">Choose what you want to explore first.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6">
+            <article class="explore-card breed-card">
+              <div class="explore-icon-large">
+                <i class="fa-solid fa-dog" aria-hidden="true"></i>
+              </div>
+              <h3>Breed Gallery</h3>
+              <p>
+                Discover different dog breeds and find one that matches your lifestyle,
+                home space, and personality. Each profile includes temperament, care needs, and suitability ratings.
+              </p>
+              <ul class="explore-features">
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> 50+ detailed breed profiles</li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Climate suitability for Botswana</li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Real owner reviews</li>
+              </ul>
+              <a href="gallery.html" class="btn btn-light">View Breeds</a>
+            </article>
+          </div>
+
+          <div class="col-md-6">
+            <article class="explore-card boutique-card">
+              <div class="explore-icon-large">
+                <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+              </div>
+              <h3>Boutique Shop</h3>
+              <p>
+                Shop stylish pet outfits, collars, toys, bowls, and grooming items for your dog.
+                Handpicked quality products delivered to your door.
+              </p>
+              <ul class="explore-features">
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Premium brands & local makers</li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Free delivery over P500</li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Easy returns within 14 days</li>
+              </ul>
+              <a href="shop.html" class="btn btn-light">Shop Now</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiz Promo - I made this section stand out to encourage users to take the quiz -->
+    <section class="quiz-promo" aria-labelledby="quiz-heading">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-8">
+            <span class="section-label light">Personalized</span>
+            <h2 id="quiz-heading">Not Sure Which Dog is Right for You?</h2>
+            <p>
+              Take our Get to Know You quiz so we can understand your style, budget,
+              living space, and daily routine. In just 2 minutes, we will match you with breeds
+              that fit your life perfectly.
+            </p>
+            <ul class="quiz-benefits">
+              <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Takes only 2 minutes</li>
+              <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Personalized breed matches</li>
+              <li><i class="fa-solid fa-check-circle" aria-hidden="true"></i> Product recommendations included</li>
+            </ul>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a href="quiz.html" class="btn btn-brand btn-lg">
+              <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i> Start Quiz
+            </a>
+            <p class="quiz-note">No email required. Completely free.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer - I kept the footer consistent across all pages for brand recognition -->
+ <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h3 class="footer-brand">Puppy Dog <span>Pals</span></h3>
+          <p>
+            A lively pet boutique and breed gallery helping dog lovers find the right companion and stylish pet products.
+          </p>
+
+          <div class="footer-socials">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <h4>Quick Links</h4>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Breed Gallery</a></li>
+            <li><a href="shop.html">Boutique Shop</a></li>
+            <li><a href="quiz.html">Get to Know You</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <h4>Contact</h4>
+          <p>Gaborone, Botswana</p>
+          <p>Email: admin@puppydogpals.co.bw</p>
+          <p>Phone: +267 73 345 678</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Puppy Dog Pals. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast notification container for cart feedback -->
+  <div id="cart-toast" class="toast-container" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous"></script>
+
+  <!-- My custom JavaScript -->
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Take our personalized quiz to find the perfect dog breed and pet products for your lifestyle.">
+  <meta name="theme-color" content="#C9A96E">
+  <meta property="og:title" content="Get to Know You Quiz | Puppy Dog Pals">
+  <meta property="og:description" content="Discover your perfect dog match in just 2 minutes.">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <title>Get to Know You Quiz | Puppy Dog Pals</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Same navbar -->
+  <nav class="navbar navbar-expand-lg site-navbar sticky-top" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html" aria-label="Puppy Dog Pals Home">
+        Puppy Dog <span>Pals</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation menu">
+        <span class="navbar-toggler-icon" aria-hidden="true"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Breed Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html">Boutique Shop</a></li>
+          <li class="nav-item"><a class="nav-link active" href="quiz.html" aria-current="page">Get to Know You</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          <li class="nav-item">
+            <a href="login.html" class="nav-link" aria-label="Login to your account">
+              <i class="fa-regular fa-user" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="cart.html" class="cart-badge" id="cartBadge" aria-label="Shopping cart, 0 items">
+              <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+              <span id="cartCount" aria-live="polite">0</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <!-- Quiz Header -->
+    <section class="page-header page-header-quiz">
+      <div class="container">
+        <span class="section-label">Personalized</span>
+        <h1>Get to Know You</h1>
+        <p>Answer a few questions and we will match you with the perfect breeds and products.</p>
+      </div>
+    </section>
+
+    <!-- Quiz Container -->
+    <section class="quiz-section" aria-labelledby="quiz-form-heading">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <!-- Progress Bar - I added this so users know how far along they are -->
+            <div class="quiz-progress" aria-hidden="true">
+              <div class="progress-bar">
+                <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+              </div>
+              <span class="progress-text">Question <span id="currentStep">1</span> of 6</span>
+            </div>
+
+            <!-- Quiz Form - I used a multi-step approach to make it feel less overwhelming -->
+            <form class="quiz-form" id="quizForm" novalidate>
+              <!-- Step 1: Interest -->
+              <fieldset class="quiz-step active" id="step1">
+                <legend class="quiz-question">What brings you to Puppy Dog Pals today?</legend>
+                <p class="quiz-hint">Select all that apply</p>
+                <div class="quiz-options">
+                  <label class="quiz-option">
+                    <input type="checkbox" name="interest" value="breeds">
+                    <span class="option-card">
+                      <i class="fa-solid fa-dog" aria-hidden="true"></i>
+                      <span class="option-title">Find a Dog Breed</span>
+                      <span class="option-desc">I want to find the perfect puppy</span>
+                    </span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="checkbox" name="interest" value="boutique">
+                    <span class="option-card">
+                      <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                      <span class="option-title">Shop Pet Products</span>
+                      <span class="option-desc">I need accessories, food, or toys</span>
+                    </span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="checkbox" name="interest" value="both">
+                    <span class="option-card">
+                      <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                      <span class="option-title">Both</span>
+                      <span class="option-desc">I want a dog AND the best products</span>
+                    </span>
+                  </label>
+                </div>
+                <div class="quiz-nav">
+                  <button type="button" class="btn btn-brand btn-next" data-next="2">Next <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                </div>
+              </fieldset>
+
+              <!-- Step 2: Home Space -->
+              <fieldset class="quiz-step" id="step2">
+                <legend class="quiz-question">What type of home do you live in?</legend>
+                <p class="quiz-hint">This helps us recommend suitable breeds</p>
+                <div class="quiz-options">
+                  <label class="quiz-option">
+                    <input type="radio" name="home" value="apartment" required>
+                    <span class="option-card">
+                      <i class="fa-solid fa-building" aria-hidden="true"></i>
+                      <span class="option-title">Apartment</span>
+                      <span class="option-desc">Limited outdoor space</span>
+                    </span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="home" value="house-small">
+                    <span class="option-card">
+                      <i class="fa-solid fa-house" aria-hidden="true"></i>
+                      <span class="option-title">Small House</span>
+                      <span class="option-desc">Small yard or garden</span>
+                    </span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="home" value="house-large">
+                    <span class="option-card">
+                      <i class="fa-solid fa-house-chimney" aria-hidden="true"></i>
+                      <span class="option-title">Large House</span>
+                      <span class="option-desc">Spacious yard or farm</span>
+                    </span>
+                  </label>
+                </div>
+                <div class="quiz-nav">
+                  <button type="button" class="btn btn-outline-brand btn-prev" data-prev="1"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+                  <button type="button" class="btn btn-brand btn-next" data-next="3">Next <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                </div>
+              </fieldset>
+
+              <!-- Step 3: Lifestyle -->
+              <fieldset class="quiz-step" id="step3">
+                <legend class="quiz-question">How would you describe your daily activity level?</legend>
+                <p class="quiz-hint">Be honest - this affects breed energy matching</p>
+                <div class="quiz-options">
+                  <label class="quiz-option">
+                    <input type="radio" name="activity" value="low" required>
+                    <span class="option-card">
+                      <i class="fa-solid fa-couch" aria-hidden="true"></i>
+                      <span class="option-title">Relaxed</span>
+                      <span class="option-desc">Short walks, lots of chilling</span>
+                    </span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="activity" value="moderate">
+                    <span class="option-card">
+                      <i class="fa-solid fa-person-walking" aria-hidden="true"></i>
+                      <span class="option-title">Moderate</span>
+                      <span class="option-desc">Daily walks, some outdoor time</span>
+                    </span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="activity" value="high">
+                    <span class="option-card">
+                      <i class="fa-solid fa-person-running" aria-hidden="true"></i>
+                      <span class="option-title">Very Active</span>
+                      <span class="option-desc">Running, hiking, adventures</span>
+                    </span>
+                  </label>
+                </div>
+                <div class="quiz-nav">
+                  <button type="button" class="btn btn-outline-brand btn-prev" data-prev="2"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+                  <button type="button" class="btn btn-brand btn-next" data-next="4">Next <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                </div>
+              </fieldset>
+
+              <!-- Step 4: Style Preference -->
+              <fieldset class="quiz-step" id="step4">
+                <legend class="quiz-question">What style appeals to you most?</legend>
+                <p class="quiz-hint">For product recommendations</p>
+                <div class="quiz-options">
+                  <label class="quiz-option">
+                    <input type="radio" name="style" value="classic" required>
+                    <span class="option-card">
+                      <i class="fa-solid fa-gem" aria-hidden="true"></i>
+                      <span class="option-title">Classic & Elegant</span>
+                      <span class="option-desc">Timeless leather, neutral tones</span>
+                    </span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="style" value="trendy">
+                    <span class="option-card">
+                      <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>
+                      <span class="option-title">Trendy & Colorful</span>
+                      <span class="option-desc">Bold patterns, bright colors</span>
+                    </span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="style" value="practical">
+                    <span class="option-card">
+                      <i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i>
+                      <span class="option-title">Practical & Durable</span>
+                      <span class="option-desc">Function first, built to last</span>
+                    </span>
+                  </label>
+                </div>
+                <div class="quiz-nav">
+                  <button type="button" class="btn btn-outline-brand btn-prev" data-prev="3"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+                  <button type="button" class="btn btn-brand btn-next" data-next="5">Next <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                </div>
+              </fieldset>
+
+              <!-- Step 5: Budget -->
+              <fieldset class="quiz-step" id="step5">
+                <legend class="quiz-question">What is your budget range?</legend>
+                <p class="quiz-hint">For both breeds and products</p>
+                <div class="quiz-options">
+                  <label class="quiz-option">
+                    <input type="radio" name="budget" value="budget" required>
+                    <span class="option-card">
+                      <i class="fa-solid fa-piggy-bank" aria-hidden="true"></i>
+                      <span class="option-title">Budget Friendly</span>
+                      <span class="option-desc">Under P5,000 for a dog</span>
+                    </span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="budget" value="mid">
+                    <span class="option-card">
+                      <i class="fa-solid fa-scale-balanced" aria-hidden="true"></i>
+                      <span class="option-title">Mid Range</span>
+                      <span class="option-desc">P5,000 - P10,000 for a dog</span>
+                    </span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="budget" value="premium">
+                    <span class="option-card">
+                      <i class="fa-solid fa-crown" aria-hidden="true"></i>
+                      <span class="option-title">Premium</span>
+                      <span class="option-desc">Over P10,000 for a dog</span>
+                    </span>
+                  </label>
+                </div>
+                <div class="quiz-nav">
+                  <button type="button" class="btn btn-outline-brand btn-prev" data-prev="4"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+                  <button type="button" class="btn btn-brand btn-next" data-next="6">Next <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                </div>
+              </fieldset>
+
+              <!-- Step 6: Personality -->
+              <fieldset class="quiz-step" id="step6">
+                <legend class="quiz-question">Which dog personality do you prefer?</legend>
+                <p class="quiz-hint">Select your top choice</p>
+                <div class="quiz-options">
+                  <label class="quiz-option">
+                    <input type="radio" name="personality" value="friendly" required>
+                    <span class="option-card">
+                      <i class="fa-solid fa-face-smile" aria-hidden="true"></i>
+                      <span class="option-title">Friendly & Social</span>
+                      <span class="option-desc">Loves everyone, great with guests</span>
+                    </span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="personality" value="loyal">
+                    <span class="option-card">
+                      <i class="fa-solid fa-shield-heart" aria-hidden="true"></i>
+                      <span class="option-title">Loyal & Protective</span>
+                      <span class="option-desc">Devoted to family, alert guardian</span>
+                    </span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="personality" value="independent">
+                    <span class="option-card">
+                      <i class="fa-solid fa-cat" aria-hidden="true"></i>
+                      <span class="option-title">Independent & Calm</span>
+                      <span class="option-desc">Self-sufficient, relaxed companion</span>
+                    </span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="personality" value="playful">
+                    <span class="option-card">
+                      <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+                      <span class="option-title">Playful & Energetic</span>
+                      <span class="option-desc">Always ready for fun and games</span>
+                    </span>
+                  </label>
+                </div>
+                <div class="quiz-nav">
+                  <button type="button" class="btn btn-outline-brand btn-prev" data-prev="5"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+                  <button type="submit" class="btn btn-brand btn-submit">
+                    <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i> Get My Matches
+                  </button>
+                </div>
+              </fieldset>
+            </form>
+
+            <!-- Results Section - Hidden until quiz is submitted -->
+            <div class="quiz-results" id="quizResults" style="display: none;">
+              <div class="results-header">
+                <div class="results-icon">
+                  <i class="fa-solid fa-check-circle" aria-hidden="true"></i>
+                </div>
+                <h2>Your Personalized Recommendations</h2>
+                <p>Based on your answers, here is what we think is perfect for you.</p>
+              </div>
+
+              <div class="results-content" id="resultsContent">
+                <!-- Results injected by JavaScript -->
+              </div>
+
+              <div class="results-actions">
+                <a href="gallery.html" class="btn btn-brand">
+                  <i class="fa-solid fa-dog" aria-hidden="true"></i> View All Breeds
+                </a>
+                <a href="shop.html" class="btn btn-outline-brand">
+                  <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i> Shop Products
+                </a>
+                <button type="button" class="btn btn-link" id="retakeQuiz">
+                  <i class="fa-solid fa-rotate-left" aria-hidden="true"></i> Retake Quiz
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Same footer -->
+   <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h3 class="footer-brand">Puppy Dog <span>Pals</span></h3>
+          <p>
+            A lively pet boutique and breed gallery helping dog lovers find the right companion and stylish pet products.
+          </p>
+
+          <div class="footer-socials">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <h4>Quick Links</h4>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Breed Gallery</a></li>
+            <li><a href="shop.html">Boutique Shop</a></li>
+            <li><a href="quiz.html">Get to Know You</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <h4>Contact</h4>
+          <p>Gaborone, Botswana</p>
+          <p>Email: admin@puppydogpals.co.bw</p>
+          <p>Phone: +267 73 345 678</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Puppy Dog Pals. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="cart-toast" class="toast-container" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous"></script>
+  <script src="script.js" defer></script>
+</body>
+</html>

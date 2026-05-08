@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about Puppy Dog Pals - our story, mission, and why we are Botswana's trusted pet destination.">
+  <meta name="theme-color" content="#C9A96E">
+  <meta property="og:title" content="About Us | Puppy Dog Pals">
+  <meta property="og:description" content="Discover the story behind Puppy Dog Pals and our passion for connecting dogs with loving homes.">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <title>About Us | Puppy Dog Pals</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Same navbar as all other pages for consistency -->
+  <nav class="navbar navbar-expand-lg site-navbar sticky-top" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html" aria-label="Puppy Dog Pals Home">
+        Puppy Dog <span>Pals</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation menu">
+        <span class="navbar-toggler-icon" aria-hidden="true"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html" aria-current="page">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Breed Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html">Boutique Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="quiz.html">Get to Know You</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          <li class="nav-item">
+            <a href="login.html" class="nav-link" aria-label="Login to your account">
+              <i class="fa-regular fa-user" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="cart.html" class="cart-badge" id="cartBadge" aria-label="Shopping cart, 0 items">
+              <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+              <span id="cartCount" aria-live="polite">0</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <!-- Page header - I kept this simple and clean to match the luxury feel -->
+    <section class="page-header">
+      <div class="container">
+        <span class="section-label">Our Story</span>
+        <h1>About Puppy Dog Pals</h1>
+        <p>Passionate about connecting dogs with loving homes across Botswana.</p>
+      </div>
+    </section>
+
+    <!-- Our Story - I wrote this section to connect emotionally with visitors -->
+    <section class="about-story" aria-labelledby="story-heading">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <span class="section-label">How It Started</span>
+            <h2 id="story-heading">From a Simple Love for Dogs</h2>
+            <p>
+              Puppy Dog Pals began in 2022 when our founder, after struggling to find a reputable breeder
+              and quality pet products in Botswana, decided to create the solution she wished existed.
+              What started as a small passion project has grown into a trusted community of dog lovers.
+            </p>
+            <p>
+              We believe every dog deserves a loving home, and every pet parent deserves access to
+              quality products, expert advice, and a supportive community. That belief drives everything we do.
+            </p>
+            <div class="story-stats">
+              <div class="story-stat">
+                <span class="stat-number">2022</span>
+                <span class="stat-label">Founded</span>
+              </div>
+              <div class="story-stat">
+                <span class="stat-number">500+</span>
+                <span class="stat-label">Dogs Homed</span>
+              </div>
+              <div class="story-stat">
+                <span class="stat-number">15+</span>
+                <span class="stat-label">Team Members</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="about-image">
+              <!-- I placed this placeholder here for the about page story image -->
+              <img src="The Puppy Dog Pals team .png" alt="The Puppy Dog Pals team with happy dogs at our Gaborone location" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Vision - I separated these into clear cards for easy reading -->
+    <section class="mission-vision" aria-labelledby="mission-heading">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <article class="mission-card">
+              <div class="mission-icon">
+                <i class="fa-solid fa-bullseye" aria-hidden="true"></i>
+              </div>
+              <h2 id="mission-heading">Our Mission</h2>
+              <p>
+                To enrich the lives of dogs and their owners in Botswana by providing trusted breed matching,
+                premium pet products, and expert care resources. We strive to be the bridge that connects
+                every dog with their perfect forever home.
+              </p>
+            </article>
+          </div>
+          <div class="col-md-6">
+            <article class="vision-card">
+              <div class="vision-icon">
+                <i class="fa-solid fa-eye" aria-hidden="true"></i>
+              </div>
+              <h2>Our Vision</h2>
+              <p>
+                To become Botswana's most trusted and loved pet community, where every dog owner feels supported,
+                informed, and inspired. We envision a future where no dog goes without love, care, and quality products.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us - I added this section to highlight our competitive advantages -->
+    <section class="why-choose-us" aria-labelledby="why-heading">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-label">Why Us</span>
+          <h2 id="why-heading">Why Choose Puppy Dog Pals</h2>
+          <p class="section-intro">
+            We go above and beyond to ensure you and your furry friend have the best experience possible.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="why-card">
+              <div class="why-icon">
+                <i class="fa-solid fa-certificate" aria-hidden="true"></i>
+              </div>
+              <h3>Trusted Breeders Only</h3>
+              <p>We personally vet every breeder partner to ensure ethical practices, healthy puppies, and transparent processes.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="why-card">
+              <div class="why-icon">
+                <i class="fa-solid fa-gem" aria-hidden="true"></i>
+              </div>
+              <h3>Premium Quality Products</h3>
+              <p>Every item in our boutique is handpicked for quality, durability, and style. If we would not use it for our own dogs, we do not sell it.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="why-card">
+              <div class="why-icon">
+                <i class="fa-solid fa-user-doctor" aria-hidden="true"></i>
+              </div>
+              <h3>Expert Guidance</h3>
+              <p>Our team includes certified trainers and veterinary consultants who provide reliable advice you can trust.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="why-card">
+              <div class="why-icon">
+                <i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i>
+              </div>
+              <h3>Personalized Matching</h3>
+              <p>Our quiz and consultation process ensures you find a breed that truly fits your lifestyle, not just looks cute.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="why-card">
+              <div class="why-icon">
+                <i class="fa-solid fa-truck-fast" aria-hidden="true"></i>
+              </div>
+              <h3>Fast Nationwide Delivery</h3>
+              <p>We deliver across Botswana within 2-5 business days. Free delivery on orders over P500.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="why-card">
+              <div class="why-icon">
+                <i class="fa-solid fa-rotate-left" aria-hidden="true"></i>
+              </div>
+              <h3>Hassle-Free Returns</h3>
+              <p>Not satisfied? Return any unused item within 14 days for a full refund. No questions asked.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section - I added this for the brand and and to build trust -->
+    <section class="team-section" aria-labelledby="team-heading">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-label">The Team</span>
+          <h2 id="team-heading">Meet the People Behind the Paws</h2>
+          <p class="section-intro">
+            A dedicated team of dog lovers working hard to make your pet parenting journey amazing.
+          </p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-6 col-lg-4">
+            <article class="team-card">
+              <div class="team-image">
+                <!-- Placeholder for team member photo -->
+                <img src="shanell.png" alt="" loading="lazy">
+              </div>
+              <h3>Lebogang M.</h3>
+              <span class="team-role">Founder & CEO</span>
+              <p>Dog mom of three and passionate about ethical breeding practices across Botswana.</p>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <article class="team-card">
+              <div class="team-image">
+                <img src="mate2.png" alt="" loading="lazy">
+              </div>
+              <h3>Kabelo T.</h3>
+              <span class="team-role">Head of Operations</span>
+              <p>Ensures every delivery arrives on time and every customer gets the support they need.</p>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <article class="team-card">
+              <div class="team-image">
+                <img src="mate1.png" alt="" loading="lazy">
+              </div>
+              <h3>Amantle K.</h3>
+              <span class="team-role">Pet Care Specialist</span>
+              <p>Certified veterinary assistant who reviews all our care content and breeder partnerships.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section - I added this to drive action after reading about us -->
+    <section class="about-cta">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Ready to Find Your Perfect Companion?</h2>
+          <p>Take our quick quiz and get personalized breed recommendations in under 2 minutes.</p>
+          <a href="quiz.html" class="btn btn-brand btn-lg">
+            <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i> Start the Quiz
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Same footer as all pages -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <h5>Puppy Dog Pals</h5>
+          <p>Your one-stop destination for finding, dressing, and caring for your perfect dog. Based in Botswana, serving dog lovers nationwide.</p>
+          <div class="footer-payment">
+            <span>We accept:</span>
+            <i class="fa-brands fa-cc-visa" aria-hidden="true" title="Visa"></i>
+            <i class="fa-brands fa-cc-mastercard" aria-hidden="true" title="Mastercard"></i>
+            <i class="fa-brands fa-cc-paypal" aria-hidden="true" title="PayPal"></i>
+            <i class="fa-solid fa-money-bill-wave" aria-hidden="true" title="Cash on Delivery"></i>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h5>Quick Links</h5>
+          <nav aria-label="Footer navigation">
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="gallery.html">Breed Gallery</a></li>
+              <li><a href="shop.html">Boutique Shop</a></li>
+              <li><a href="quiz.html">Get to Know You Quiz</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h5>Customer Care</h5>
+          <nav aria-label="Customer care navigation">
+            <ul class="footer-links">
+              <li><a href="shipping.html">Shipping & Delivery</a></li>
+              <li><a href="returns.html">Returns & Exchanges</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="care-guide.html">Dog Care Guide</a></li>
+              <li><a href="breeder-program.html">Breeder Program</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h5>Contact Information</h5>
+          <address>
+            <strong>Puppy Dog Pals Ltd</strong><br>
+            Plot 247, Independence Avenue<br>
+            Gaborone, Botswana<br>
+            <a href="mailto:info@puppydogpals.co.bw">info@puppydogpals.co.bw</a><br>
+            <a href="tel:+26771234567">+267 71 234 567</a><br>
+            <a href="tel:+26773345678">+267 73 345 678</a>
+          </address>
+          <div class="footer-hours">
+            <strong>Opening Hours:</strong><br>
+            Mon - Fri: 8:00 AM - 6:00 PM<br>
+            Sat: 9:00 AM - 4:00 PM<br>
+            Sun: Closed
+          </div>
+          <div class="footer-social">
+            <a href="https://instagram.com/puppydogpals" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram (opens in new tab)">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://tiktok.com/@puppydogpals" target="_blank" rel="noopener noreferrer" aria-label="Follow us on TikTok (opens in new tab)">
+              <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+            </a>
+            <a href="https://wa.me/26771234567" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp (opens in new tab)">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>&copy; 2026 Puppy Dog Pals. CSE105 BAC Assignment.</p>
+          <nav aria-label="Legal links">
+            <a href="privacy.html">Privacy Policy</a>
+            <span class="separator">|</span>
+            <a href="terms.html">Terms of Service</a>
+            <span class="separator">|</span>
+            <a href="sitemap.html">Sitemap</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="cart-toast" class="toast-container" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous"></script>
+  <script src="script.js" defer></script>
+</body>
+</html>'''
+
+with open('/mnt/agents/output/about.html', 'w', encoding='utf-8') as f:
+    f.write(about_html)
+
+print("about.html created successfully!")
